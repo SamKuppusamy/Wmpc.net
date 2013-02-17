@@ -1,0 +1,7 @@
+C:\dev\JA\Wmpc.net\Wmpc.Test\bin\Debug\Wmpc.Test.dll
+C:\dev\JA\Wmpc.net\Wmpc.Test\bin\Debug\Wmpc.Test.pdb
+C:\dev\JA\Wmpc.net\Wmpc.Test\bin\Debug\Wmpc.Mpd.dll
+C:\dev\JA\Wmpc.net\Wmpc.Test\bin\Debug\Wmpc.Mpd.pdb
+C:\dev\JA\Wmpc.net\Wmpc.Test\obj\Debug\Wmpc.Test.csprojResolveAssemblyReference.cache
+C:\dev\JA\Wmpc.net\Wmpc.Test\obj\Debug\Wmpc.Test.dll
+C:\dev\JA\Wmpc.net\Wmpc.Test\obj\Debug\Wmpc.Test.pdb

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wmpc", "Wmpc\Wmpc.csproj", "{673BD48D-35C5-42A6-B68A-873600773B62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wmpc.Mpd", "Wmpc.Mpd\Wmpc.Mpd.csproj", "{84CCA581-D113-4F2C-BAB5-83AED942E6C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wmpc.Test", "Wmpc.Test\Wmpc.Test.csproj", "{82EB685F-964D-4E86-8DEE-B509EC811479}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{673BD48D-35C5-42A6-B68A-873600773B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{673BD48D-35C5-42A6-B68A-873600773B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{673BD48D-35C5-42A6-B68A-873600773B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{673BD48D-35C5-42A6-B68A-873600773B62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84CCA581-D113-4F2C-BAB5-83AED942E6C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84CCA581-D113-4F2C-BAB5-83AED942E6C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84CCA581-D113-4F2C-BAB5-83AED942E6C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84CCA581-D113-4F2C-BAB5-83AED942E6C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82EB685F-964D-4E86-8DEE-B509EC811479}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82EB685F-964D-4E86-8DEE-B509EC811479}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82EB685F-964D-4E86-8DEE-B509EC811479}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82EB685F-964D-4E86-8DEE-B509EC811479}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

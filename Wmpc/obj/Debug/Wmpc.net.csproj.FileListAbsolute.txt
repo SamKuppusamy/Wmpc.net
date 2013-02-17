@@ -1,0 +1,5 @@
+C:\dev\Wmpc.net\Wmpc.net\bin\Debug\Wmpc.net.exe
+C:\dev\Wmpc.net\Wmpc.net\bin\Debug\Wmpc.net.pdb
+C:\dev\Wmpc.net\Wmpc.net\obj\Debug\Wmpc.net.csprojResolveAssemblyReference.cache
+C:\dev\Wmpc.net\Wmpc.net\obj\Debug\Wmpc.net.exe
+C:\dev\Wmpc.net\Wmpc.net\obj\Debug\Wmpc.net.pdb
