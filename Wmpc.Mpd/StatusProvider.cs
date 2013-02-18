@@ -9,6 +9,7 @@ namespace Wmpc.Mpd {
         const string MPD_CLEAR_ERROR = "clearerror";
         const string MPD_CURRENTSONG = "currentsong";
         const string MPD_STATUS = "status";
+        const string MPD_STATS = "stats";
 
         public StatusProvider(Client client) : base(client) { }
 
@@ -18,16 +19,16 @@ namespace Wmpc.Mpd {
 
         public Track QueryCurrentSong() {
             Response response =  this.client.SendCommand(MPD_CURRENTSONG);
-            Track track = new Track(response.Values);
+            Track track = new Track(response);
             return track;
         }
 
-        public Response QueryStatus(string status) {
-            return this.client.SendCommand(MPD_STATUS + ' ' + status);
+        public Status QueryStatus() {
+            return new Status(this.client.SendCommand(MPD_STATUS));
         }
 
-        public Response QueryElapsed() {
-            return this.QueryStatus(Status.MPD_STATUS_ELAPSED);
+        public Stats QueryStats() {
+            return new Stats(this.client.SendCommand(MPD_STATS));
         }
 
     }

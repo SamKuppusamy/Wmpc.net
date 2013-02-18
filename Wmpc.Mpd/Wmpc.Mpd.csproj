@@ -39,6 +39,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
+    <Compile Include="Command.cs" />
+    <Compile Include="PlaybackProvider.cs" />
+    <Compile Include="Stats.cs" />
+    <Compile Include="IResponseEntity.cs" />
     <Compile Include="Status.cs" />
     <Compile Include="Provider.cs" />
     <Compile Include="MpdException.cs" />
@@ -46,6 +50,10 @@
     <Compile Include="Response.cs" />
     <Compile Include="StatusProvider.cs" />
     <Compile Include="Track.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

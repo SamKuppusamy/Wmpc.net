@@ -55,8 +55,10 @@ namespace Wmpc.Mpd {
         }
 
         public string Send(string command) {
+            if (!command.EndsWith("\n")) command += (char)10;
+
             UTF8Encoding utf8 = new UTF8Encoding();
-            byte[] data = utf8.GetBytes(command + (char)10);
+            byte[] data = utf8.GetBytes(command);
             NetworkStream stream = this.tcpClient.GetStream();
             stream.Write(data, 0, data.Length);
             data = new byte[256];
@@ -70,6 +72,10 @@ namespace Wmpc.Mpd {
                 }
             }
             return response;
+        }
+
+        public Response SendCommand(Command  command) {
+            return this.SendCommand(command.ToString());
         }
 
         public Response SendCommand(string command) {

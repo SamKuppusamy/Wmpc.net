@@ -15,7 +15,7 @@ namespace Wmpc.Test {
 
         [TestMethod]
         public void TestClient() {
-            Response response = client.SendCommand("status time");
+            Response response = client.SendCommand("status");
             Assert.IsTrue(response.OK);
             Assert.IsNotNull(response.ResponseString);
         }
@@ -33,9 +33,15 @@ namespace Wmpc.Test {
         }
 
         [TestMethod]
-        public void TestStatusElapsed() {
-            Response response = this.client.StatusProvider.QueryElapsed();
-            Assert.IsTrue(response.OK);
+        public void TestStatus() {
+            Status status = this.client.StatusProvider.QueryStatus();
+            Assert.IsNotNull(status);
+        }
+
+        [TestMethod]
+        public void TestStats() {
+            Stats stats = this.client.StatusProvider.QueryStats();
+            Assert.IsNotNull(stats);
         }
 
 

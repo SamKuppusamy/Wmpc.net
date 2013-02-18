@@ -6,7 +6,7 @@ using System.Text;
 namespace Wmpc.Mpd {
     public class Response {
 
-        private bool ok = false;
+        protected bool ok = false;
 
         public bool OK {
             get {
@@ -14,7 +14,7 @@ namespace Wmpc.Mpd {
             }
         }
 
-        private string[] header;
+        protected string[] header;
 
         public string[] Header {
             get {
@@ -22,7 +22,7 @@ namespace Wmpc.Mpd {
             }
         }
 
-        private string responseString;
+        protected string responseString;
 
         public string ResponseString {
             get {
@@ -30,7 +30,7 @@ namespace Wmpc.Mpd {
             }
         }
 
-        private List<KeyValuePair<string,string>> values;
+        protected List<KeyValuePair<string, string>> values;
 
         public List<KeyValuePair<string, string>> Values {
             get {
@@ -38,7 +38,7 @@ namespace Wmpc.Mpd {
             }
         }
 
-        public Response() { }
+        //public Response() { }
 
         public Response(string str) {
             this.responseString = str;
