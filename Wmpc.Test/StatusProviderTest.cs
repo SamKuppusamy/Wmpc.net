@@ -4,7 +4,7 @@ using Wmpc.Mpd;
 
 namespace Wmpc.Test {
     [TestClass]
-    public class UnitTest1 {
+    public class StatusProviderTest {
 
         private Client client;
 

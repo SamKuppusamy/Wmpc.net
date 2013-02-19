@@ -20,6 +20,15 @@ namespace Wmpc.Mpd {
             }
         }
 
+        private PlaybackProvider playbackProvider;
+
+        public PlaybackProvider PlaybackProvider {
+            get {
+                return this.playbackProvider;
+            }
+        }
+
+
         private string server;
 
         public string Server {
@@ -52,6 +61,7 @@ namespace Wmpc.Mpd {
             this.port = port;
 
             this.statusProvider = new StatusProvider(this);
+            this.playbackProvider = new PlaybackProvider(this);
         }
 
         public string Send(string command) {

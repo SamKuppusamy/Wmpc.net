@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="Client.cs" />
     <Compile Include="Command.cs" />
+    <Compile Include="PlaylistProvider.cs" />
     <Compile Include="PlaybackProvider.cs" />
     <Compile Include="Stats.cs" />
     <Compile Include="IResponseEntity.cs" />
