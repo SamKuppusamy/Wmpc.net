@@ -26,31 +26,6 @@ namespace Wmpc.Mpd {
         const string MPD_SWAP = "swap";
         const string MPD_SWAPID = "swapid";
         
-        /*
-     
-move [{FROM} | {START:END}] {TO}
- Moves the song at FROM or range of songs at START:END to TO in the playlist. [5] 
-moveid {FROM} {TO}
- Moves the song with FROM (songid) to TO (playlist index) in the playlist. If TO is negative, it is relative to the current song in the playlist (if there is one). 
-playlist 
- Displays the current playlist. 
-playlistfind {TAG} {NEEDLE}
- Finds songs in the current playlist with strict matching. 
-playlistid {SONGID}
- Displays a list of songs in the playlist. SONGID is optional and specifies a single song to display info for. 
-playlistinfo [[SONGPOS] | [START:END]]
- Displays a list of all songs in the playlist, or if the optional argument is given, displays information only for the song SONGPOS or the range of songs START:END [5] 
-playlistsearch {TAG} {NEEDLE}
- Searches case-sensitively for partial matches in the current playlist. 
-plchanges {VERSION}
- Displays changed songs currently in the playlist since VERSION. 
- To detect songs that were deleted at the end of the playlist, use playlistlength returned by status command. 
-plchangesposid {VERSION}
- Displays changed songs currently in the playlist since VERSION. This function only returns the position and the id of the changed song, not the complete metadata. This is more bandwidth efficient. 
- To detect songs that were deleted at the end of the playlist, use playlistlength returned by status command. 
-        */
-
-
         public PlaylistProvider(Client client) : base(client) { }
 
         public Response QueryAdd(string uri) {
@@ -106,12 +81,70 @@ plchangesposid {VERSION}
             return this.client.SendCommand(command);
         }
 
-
         public Response QuerySwapId(int id1, int id2) {
             Command command = new Command(MPD_SWAPID, id1, id2);
             return this.client.SendCommand(command);
         }
 
+        public Response QueryMove(int from, int start, int end) {
+            Command command = new Command(MPD_MOVE, from, start.ToString() + ":" + end.ToString());
+            return this.client.SendCommand(command);
+        }
+
+        public Response QueryMoveId(int from, int to) {
+            Command command = new Command(MPD_MOVEID, from, to);
+            return this.client.SendCommand(command);
+        }
+
+        public Response QueryPlaylist() {
+            Command command = new Command(MPD_PLAYLIST);
+            return this.client.SendCommand(command);
+        }
+
+        public Response QueryPlaylistFind(string tag, string needle) {
+            Command command = new Command(MPD_PLAYLISTFIND, tag, needle);
+            return this.client.SendCommand(command);
+        }
+
+        public Response QueryPlaylistId() {
+            Command command = new Command(MPD_PLAYLISTID);
+            return this.client.SendCommand(command);
+        }
+
+        public Response QueryPlaylistId(int songid) {
+            Command command = new Command(MPD_PLAYLISTID, songid);
+            return this.client.SendCommand(command);
+        }
+
+        public Response QueryPlaylistInfo(int start, int end) {
+            Command command = new Command(MPD_PLAYLISTINFO, start.ToString() + ":" + end.ToString());
+            return this.client.SendCommand(command);
+        }
+
+        public Response QueryPlaylistInfo(int songpos) {
+            Command command = new Command(MPD_PLAYLISTINFO, songpos);
+            return this.client.SendCommand(command);
+        }
+
+        public Response QueryPlaylistInfo() {
+            Command command = new Command(MPD_PLAYLISTINFO);
+            return this.client.SendCommand(command);
+        }
+
+        public Response QueryPlaylistSearch(string tag, string needle) {
+            Command command = new Command(MPD_PLAYLISTSEARCH, tag, needle);
+            return this.client.SendCommand(command);
+        }
+
+        public Response QueryPlChanges(string version) {
+            Command command = new Command(MPD_PLCHANGES, version);
+            return this.client.SendCommand(command);
+        }
+
+        public Response QueryPlChangesPosId(string version) {
+            Command command = new Command(MPD_PLCHANGESPOSID, version);
+            return this.client.SendCommand(command);
+        }
 
 
         const string MPD_LISTPLAYLIST = "listplaylist";
