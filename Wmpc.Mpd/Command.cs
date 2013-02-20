@@ -74,13 +74,24 @@ namespace Wmpc.Mpd {
             this.Param2 = Utils.BoolToString(param2);
         }
 
+        public bool QuoteParam1 { get; set; }
+        public bool QuoteParam2 { get; set; }
+
         public override string ToString() {
             string command = this.Cmd;
             if (this.Param1 != null) {
-                command += " " + this.Param1;
+                if (this.QuoteParam1) {
+                    command += " \"" + this.Param1 + "\"";
+                } else {
+                    command += " " + this.Param1;
+                }
             }
             if (this.Param2 != null) {
-                command += " " + this.Param2;
+                if (this.QuoteParam2) {
+                    command += " \"" + this.Param2 + "\"";
+                } else {
+                    command += " " + this.Param2;
+                }
             }
             command += "\n";
             return command;
